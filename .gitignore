@@ -1,0 +1,53 @@
+# Python virtual environment
+venv/
+env/
+.venv/
+
+# Environment variables (contains sensitive info)
+.env
+
+# Data files (may contain sensitive clinical data)
+*.xlsx
+*.xls
+*.csv
+input/
+output/
+charts/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Debug/test/legacy files
+test_*.py
+check_fields.py
+diagnostic_test.py
+real_data_diagnostic.py
+fix_clinical_engine.py
+test_sort.py
+test_font.py
+clinical_engine.py
+clinical_engine_v2.py
+data_cleaner.py
+feishu_integration.py
+llm_api.py
+main_workflow.py
+tracker_app.py
+tracker_app_inv6452.py
+test_output/
+
+# Chinese resource files
+*.png
+*.md

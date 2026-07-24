@@ -1,0 +1,39 @@
+{
+  "version": "1.0",
+  "synonyms": {
+    "country": {
+      "target": "Country_Region",
+      "source": "layer2_fuzzy",
+      "count": 4
+    },
+    "c1d1_date": {
+      "target": "C1D1",
+      "source": "layer2_fuzzy",
+      "count": 4
+    },
+    "icf_date": {
+      "target": "Date_ICF",
+      "source": "layer3_llm",
+      "count": 4
+    },
+    "随访备注": {
+      "target": "Comment",
+      "source": "layer3_llm",
+      "count": 4
+    },
+    "cohort_mg": {
+      "target": "Cohort",
+      "source": "layer2_fuzzy",
+      "count": 8
+    }
+  },
+  "stats": {
+    "total_synonyms": 5,
+    "layer1_exact": 0,
+    "layer2_fuzzy": 3,
+    "layer3_llm": 2,
+    "total_files_processed": 12,
+    "llm_calls": 1,
+    "llm_calls_saved": 19
+  }
+}
