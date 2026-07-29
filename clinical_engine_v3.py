@@ -16,7 +16,10 @@ import numpy as np
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
-import seaborn as sns
+try:
+    import seaborn as sns
+except ImportError:
+    sns = None
 from datetime import datetime
 from typing import Dict, Optional, List, Tuple
 import warnings
@@ -131,7 +134,8 @@ except Exception:
     pass  # 字体设置失败不影响核心功能
 
 try:
-    sns.set_style("whitegrid")
+    if sns is not None:
+        sns.set_style("whitegrid")
 except Exception:
     pass
 
