@@ -125,8 +125,15 @@ def setup_chinese_font():
     plt.rcParams['axes.unicode_minus'] = False
     plt.rcParams['figure.dpi'] = 150
 
-setup_chinese_font()
-sns.set_style("whitegrid")
+try:
+    setup_chinese_font()
+except Exception:
+    pass  # 字体设置失败不影响核心功能
+
+try:
+    sns.set_style("whitegrid")
+except Exception:
+    pass
 
 COLOR_PALETTES = {
     'primary': ['#48CAE4', '#90E0EF', '#00B4D8', '#0077B6', '#023E8A'],

@@ -17,7 +17,14 @@ import zipfile
 import io
 warnings.filterwarnings('ignore')
 
-from clinical_engine_v3 import run_tracker_analysis, setup_chinese_font, load_tracker_data, validate_tracker_data
+try:
+    from clinical_engine_v3 import run_tracker_analysis, setup_chinese_font, load_tracker_data, validate_tracker_data
+except Exception as _import_err:
+    st.set_page_config(page_title="临床试验 Tracker 分析系统", page_icon="📊", layout="wide")
+    st.error(f"❌ 导入分析引擎失败：{_import_err}")
+    import traceback
+    st.code(traceback.format_exc())
+    st.stop()
 
 def _fmt_rows(rows, max_show=5):
     """格式化行号列表"""
